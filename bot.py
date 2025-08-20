@@ -6,7 +6,7 @@ from telegram import Update, ChatPermissions
 from telegram.ext import Application, CommandHandler, MessageHandler, ContextTypes, filters
 from deep_translator import GoogleTranslator
 from openai import OpenAI
-from serpapi import GoogleSearch
+from serpapi import google_search
 import yt_dlp
 import re
 
@@ -26,8 +26,8 @@ logging.basicConfig(
 
 # ------------------- HELPERS -------------------
 def search_google(query):
-    client = GoogleSearchResults({"q": query, "api_key": SERPAPI_KEY})
-    results = client.get_dict()
+    search = GoogleSearch({"q": query, "api_key": SERPAPI_KEY})
+    results = search.get_dict()
     snippets = []
     if "organic_results" in results:
         for r in results["organic_results"][:3]:
