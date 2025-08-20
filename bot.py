@@ -26,8 +26,8 @@ logging.basicConfig(
 
 # ------------------- HELPERS -------------------
 def search_google(query):
-    search = GoogleSearch({"q": query, "api_key": SERPAPI_KEY})
-    results = search.get_dict()
+    client = GoogleSearchResults({"q": query, "api_key": SERPAPI_KEY})
+    results = client.get_dict()
     snippets = []
     if "organic_results" in results:
         for r in results["organic_results"][:3]:
