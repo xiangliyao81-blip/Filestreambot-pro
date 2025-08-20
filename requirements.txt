@@ -1,8 +1,6 @@
-Pillow
-python-telegram-bot>=20.3
-deep-translator
+python-telegram-bot==20.5
 openai
-serpapi
-transformers
-torch
+deep-translator
 yt-dlp
+Pillow
+google-api-python-client
