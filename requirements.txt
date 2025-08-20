@@ -1,5 +1,8 @@
-python-telegram-bot==13.7
-deep-translator==1.11.4
-openai==0.28.1
-serpapi==0.1.5
-pytube==12.1.0
+Pillow
+python-telegram-bot>=20.3
+deep-translator
+openai
+serpapi
+transformers
+torch
+yt-dlp
